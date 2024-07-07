@@ -1,0 +1,17 @@
+<h1>REACTIVE  FORM</h1>
+<form  [formGroup]="userForm" (ngSubmit)="submit()">
+    <div class="grp">
+        <label for="name">Username</label>
+        <input type="text" name="name" id="" placeholder="Enter name" formControlName="name">
+        
+    </div>
+    <div class="grp">
+        <label for="Password">Password </label>
+        <input type="Password" name="Password" id="" placeholder="Enter Password" formControlName="password">
+    </div>
+    <div class="grp">
+        <label for="Email" class="email_label">Email  </label>
+        <input type="Email" name="Email" id="" placeholder="Enter Email" formControlName="email">
+    </div>
+    <input type="submit" value="Submit" [disabled]="!userForm.valid">
+</form>
